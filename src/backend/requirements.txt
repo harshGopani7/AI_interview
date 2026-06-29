@@ -1,0 +1,15 @@
+flask
+flask-cors
+flask-jwt-extended
+google-generativeai
+pymongo 
+bcrypt 
+python-dotenv 
+PyPDF2 
+python-docx
+gunicorn
+stripe
+razorpay
+google-api-python-client
+google-auth
+google-auth-oauthlib

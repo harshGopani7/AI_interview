@@ -1,0 +1,491 @@
+/* ===================================
+   Admin CV Analysis Page
+   =================================== */
+
+.admin-cv-container {
+  padding: 0;
+}
+
+.admin-cv-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.admin-cv-stat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.admin-cv-stat-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+.admin-cv-stat-icon.primary {
+  background: var(--accent-soft);
+  color: var(--accent-primary);
+}
+
+.admin-cv-stat-icon.success {
+  background: var(--success-light);
+  color: var(--success);
+}
+
+.admin-cv-stat-icon.info {
+  background: var(--info-light);
+  color: var(--info);
+}
+
+.admin-cv-stat-icon.warning {
+  background: var(--warning-light);
+  color: var(--warning);
+}
+
+.admin-cv-stat-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.admin-cv-stat-label {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* Table */
+.admin-cv-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-cv-table th {
+  text-align: left;
+  padding: 12px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
+  border-bottom: 2px solid var(--border-light);
+  white-space: nowrap;
+}
+
+.admin-cv-table td {
+  padding: 14px 16px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-light);
+  vertical-align: middle;
+}
+
+.admin-cv-table tbody tr:hover {
+  background: var(--bg-secondary);
+}
+
+.admin-cv-table tbody tr {
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.admin-cv-org-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.admin-cv-org-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--accent-soft);
+  color: var(--accent-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.admin-cv-status {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.admin-cv-status.completed {
+  background: var(--success-light);
+  color: var(--success);
+}
+
+.admin-cv-status.analyzing {
+  background: var(--info-light);
+  color: var(--info);
+}
+
+.admin-cv-status.failed {
+  background: var(--error-light);
+  color: var(--error);
+}
+
+.admin-cv-status.partial {
+  background: var(--warning-light);
+  color: var(--warning);
+}
+
+.admin-cv-status.created,
+.admin-cv-status.uploaded {
+  background: var(--bg-muted);
+  color: var(--text-muted);
+}
+
+.admin-cv-token-cell {
+  font-weight: 600;
+  color: var(--accent-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── Detail Modal ── */
+.admin-cv-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1100;
+  padding: 20px;
+}
+
+.admin-cv-modal {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  width: 100%;
+  max-width: 960px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.admin-cv-modal-header {
+  padding: 24px 28px 16px;
+  border-bottom: 1px solid var(--border-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: sticky;
+  top: 0;
+  background: var(--bg-card);
+  z-index: 2;
+}
+
+.admin-cv-modal-header h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 4px;
+}
+
+.admin-cv-modal-header p {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.admin-cv-modal-close {
+  background: none;
+  border: none;
+  font-size: 22px;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 4px;
+  border-radius: var(--radius-sm);
+  transition: var(--transition-fast);
+}
+
+.admin-cv-modal-close:hover {
+  background: var(--bg-muted);
+  color: var(--text-primary);
+  transform: none;
+}
+
+.admin-cv-modal-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 16px 28px;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-light);
+  font-size: 13px;
+}
+
+.admin-cv-modal-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-secondary);
+}
+
+.admin-cv-modal-meta-item strong {
+  color: var(--text-primary);
+}
+
+.admin-cv-modal-body {
+  padding: 24px 28px;
+}
+
+.admin-cv-modal-actions {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Resume cards in modal */
+.admin-cv-resume-card {
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  margin-bottom: 12px;
+  overflow: hidden;
+  transition: var(--transition-fast);
+}
+
+.admin-cv-resume-card:hover {
+  border-color: var(--accent-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.admin-cv-resume-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  cursor: pointer;
+  background: var(--bg-primary);
+}
+
+.admin-cv-resume-header:hover {
+  background: var(--bg-secondary);
+}
+
+.admin-cv-resume-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex: 1;
+  min-width: 0;
+}
+
+.admin-cv-resume-rank {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--bg-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--text-secondary);
+  flex-shrink: 0;
+}
+
+.admin-cv-resume-rank.top {
+  background: var(--accent-soft);
+  color: var(--accent-primary);
+}
+
+.admin-cv-resume-name {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text-primary);
+}
+
+.admin-cv-resume-file {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.admin-cv-resume-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.admin-cv-resume-score {
+  font-weight: 700;
+  font-size: 15px;
+  min-width: 50px;
+  text-align: right;
+}
+
+.admin-cv-resume-score.high { color: var(--success); }
+.admin-cv-resume-score.mid { color: var(--warning); }
+.admin-cv-resume-score.low { color: var(--error); }
+
+.admin-cv-resume-verdict {
+  padding: 3px 10px;
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.admin-cv-resume-verdict.Shortlist {
+  background: var(--success-light);
+  color: var(--success);
+}
+
+.admin-cv-resume-verdict.Borderline {
+  background: var(--warning-light);
+  color: var(--warning);
+}
+
+.admin-cv-resume-verdict.Reject {
+  background: var(--error-light);
+  color: var(--error);
+}
+
+.admin-cv-resume-chevron {
+  font-size: 18px;
+  color: var(--text-muted);
+  transition: transform 0.2s ease;
+}
+
+.admin-cv-resume-chevron.open {
+  transform: rotate(180deg);
+}
+
+/* Expanded detail */
+.admin-cv-resume-detail {
+  padding: 16px 18px;
+  border-top: 1px solid var(--border-light);
+  background: var(--bg-secondary);
+}
+
+.admin-cv-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.admin-cv-detail-item {
+  font-size: 13px;
+}
+
+.admin-cv-detail-item label {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: var(--text-muted);
+  margin-bottom: 2px;
+}
+
+.admin-cv-detail-item span {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.admin-cv-skills-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.admin-cv-skill-tag {
+  padding: 2px 8px;
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.admin-cv-skill-tag.matched {
+  background: var(--success-light);
+  color: var(--success);
+}
+
+.admin-cv-skill-tag.missing {
+  background: var(--error-light);
+  color: var(--error);
+}
+
+.admin-cv-summary-text {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-top: 10px;
+  padding: 10px 14px;
+  background: var(--bg-card);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-light);
+}
+
+.admin-cv-resume-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.admin-cv-btn-sm {
+  padding: 6px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid var(--border-light);
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: var(--transition-fast);
+}
+
+.admin-cv-btn-sm:hover {
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+  transform: none;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .admin-cv-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .admin-cv-detail-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .admin-cv-stats {
+    grid-template-columns: 1fr;
+  }
+  .admin-cv-detail-grid {
+    grid-template-columns: 1fr;
+  }
+  .admin-cv-modal {
+    max-width: 100%;
+  }
+}

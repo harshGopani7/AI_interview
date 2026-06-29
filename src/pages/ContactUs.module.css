@@ -1,0 +1,91 @@
+.contactSection {
+  background-color: var(--bg-secondary);
+  padding: var(--space-2xl) 0;
+}
+
+.card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-xl);
+  transition: var(--transition-base);
+}
+
+.description {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 500px;
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+  margin-top: var(--space-lg);
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  transition: var(--transition-fast);
+}
+
+.contactItem:hover {
+  background-color: var(--bg-secondary);
+  border-color: var(--border-light);
+  transform: translateX(5px);
+}
+
+.iconBox {
+  background: var(--bg-gradient-soft);
+  color: var(--accent-primary);
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  font-size: 1.5rem;
+  margin-right: var(--space-md);
+  border: 1px solid var(--accent-border);
+  flex-shrink: 0;
+}
+
+.infoContent h6 {
+  color: var(--text-primary);
+  font-weight: 600;
+  margin-bottom: var(--space-xs);
+  font-size: 1rem;
+}
+
+.infoContent p {
+  color: var(--text-muted);
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.link {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition-fast);
+  display: block;
+}
+
+.link:hover {
+  color: var(--accent-primary);
+}
+
+@media (min-width: 992px) {
+  .contactGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

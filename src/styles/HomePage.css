@@ -1,0 +1,263 @@
+.home-page {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hero-section {
+  min-height: calc(100vh - 70px); /* Full viewport height minus header */
+  align-items: center;
+  margin-top: 1rem;
+  background: linear-gradient(to bottom, var(--hero-gradient-start), var(--hero-gradient-end));
+  color: var(--text-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-image-container {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  display: inline-block;
+  transition: transform 0.3s ease;
+  filter: var(--image-filter);
+}
+
+.hero-image:hover {
+  transform: scale(1.03);
+}
+
+.hero-content {
+  padding: 0 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.hero-eyebrow {
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+  color: var(--primary-color);
+  display: inline-block;
+  background-color: var(--accent-color);
+  padding: 0.35rem 1rem;
+  border-radius: 20px;
+}
+
+.hero-title {
+  font-size: 2.75rem;
+  font-weight: 800;
+  margin-bottom: 1.25rem;
+  line-height: 1.2;
+  color: var(--heading-color);
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.hero-description {
+  margin-bottom: 2rem;
+}
+
+.hero-description p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.benefits-section {
+  background-color: rgba(var(--primary-color-rgb), 0.08);
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  margin: 1.5rem 0;
+  border-left: 4px solid var(--primary-color);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.benefits-section h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--heading-color);
+}
+
+.benefits-section ul {
+  list-style-type: none;
+  padding-left: 0.5rem;
+  margin-bottom: 0;
+}
+
+.benefits-section li {
+  position: relative;
+  padding-left: 1.75rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.benefits-section li:before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.benefit-highlight {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.hero-cta {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  font-weight: 600;
+  padding: 0.875rem 2.5rem;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(var(--primary-color-rgb), 0.25);
+}
+
+.hero-cta:hover, .hero-cta:focus {
+  /* border-color: var(--primary-color-dark); */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(var(--primary-color-rgb), 0.35);
+}
+
+/* ... rest of the code remains the same ... */
+
+@media (max-width: 991px) {
+  .hero-section {
+    text-align: center;
+    padding: 1rem 0;
+  }
+  
+  .hero-content {
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .hero-title {
+    font-size: 2.25rem;
+    margin-top: 1rem;
+    text-align: center;
+  }
+  
+  .benefits-section {
+    padding: 1rem 1.5rem;
+    margin: 1rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: auto;
+    padding: 2rem 0;
+  }
+  
+  .hero-content {
+    padding: 0 0.75rem;
+  }
+  
+  .hero-title {
+    font-size: 1.8rem;
+    line-height: 1.3;
+  }
+  
+  .hero-description p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  .benefits-section {
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+  
+  .benefits-section h3 {
+    font-size: 1.2rem;
+  }
+  
+  .benefits-section li {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section {
+    padding: 1.5rem 0;
+  }
+  
+  .hero-content {
+    padding: 0 0.5rem;
+  }
+  
+  .hero-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-description p {
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .benefits-section {
+    padding: 0.75rem;
+    margin: 0.75rem 0;
+  }
+  
+  .benefits-section h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .benefits-section li {
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .global-button {
+    font-size: 16px;
+    padding: 0.75rem 1.5rem;
+  }
+}
+
+.chatbot-container-outside {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 350px;
+  max-width: 90vw;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 480px) {
+  .chatbot-container-outside {
+    width: 280px;
+    right: 10px;
+    bottom: 70px;
+  }
+}
+

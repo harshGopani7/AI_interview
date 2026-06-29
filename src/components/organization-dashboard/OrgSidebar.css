@@ -1,0 +1,101 @@
+.org-sidebar {
+  width: 260px;
+  background-color: var(--accent-secondary); /* Dark theme for sidebar */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  transition: var(--transition-base);
+  z-index: 100;
+}
+
+.org-sidebar-header {
+  padding: var(--space-xl) var(--space-lg);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.sidebar-logo {
+  height: 32px;
+  filter: brightness(0) invert(1); /* Makes the logo white for dark sidebar */
+}
+
+.sidebar-nav-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: var(--space-md);
+}
+
+.org-sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.org-nav-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: 12px 16px;
+  color: #9ca3af; /* Muted text for inactive */
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: var(--transition-fast);
+  border: none;
+  background: transparent;
+  width: 100%;
+  text-align: left;
+}
+
+.org-nav-item:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Active Link State */
+.org-nav-item.active {
+  background-color: var(--accent-primary);
+  color: white;
+}
+.org-nav-icon:active{
+  color:white;
+}
+.org-nav-icon {
+  color:white;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+
+.org-nav-text{
+  color:#f3f6fb
+}
+
+.sidebar-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: var(--space-md);
+}
+
+.logout-btn {
+  margin-top: var(--space-xs);
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background-color: var(--error);
+  color: white;
+}
+
+/* Responsive sidebar for mobile */
+@media (max-width: 991px) {
+  .org-sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+}

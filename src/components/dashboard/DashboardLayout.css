@@ -1,0 +1,63 @@
+/* Structural Base */
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden; /* Prevents body-level scrolling */
+  background-color: var(--bg-secondary);
+}
+
+/* Main Viewport Logic */
+.dashboard-viewport {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0; /* Prevents flex items from pushing width */
+  position: relative;
+}
+
+/* Content Area */
+.dashboard-content-area {
+  flex: 1;
+  overflow-y: auto; /* Independent scrolling for the main content */
+  padding: var(--space-xl);
+  /* Smooth scroll for modern feel */
+  scroll-behavior: smooth;
+}
+
+/* Inner content constraint for readability */
+.content-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Utility: Entrance Animation */
+.fade-in {
+  animation: dashboardEntrance 0.4s ease-out;
+}
+
+@keyframes dashboardEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Adjustments (Bootstrap Breakpoints) */
+@media (max-width: 991.98px) {
+  .dashboard-container {
+    flex-direction: column;
+    overflow-y: auto;
+    height: auto;
+  }
+  
+  .dashboard-content-area {
+    padding: var(--space-md);
+    overflow-y: visible; /* Let the container handle scroll on mobile */
+  }
+}

@@ -1,0 +1,12 @@
+.interview-table {
+  width: 100%;
+  background: var(--bg-primary);
+  border-collapse: collapse;
+  margin-top: var(--space-md);
+}
+
+.interview-table th,
+.interview-table td {
+  padding: 12px;
+  border-bottom: 1px solid var(--border-light);
+}

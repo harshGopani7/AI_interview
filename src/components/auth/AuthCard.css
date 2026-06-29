@@ -1,0 +1,100 @@
+.auth-wrapper {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-lg);
+  /* Using a very soft tint of your accent for the page background */
+  background: radial-gradient(circle at top right, var(--accent-soft), transparent),
+              var(--bg-secondary);
+}
+
+.auth-card-container {
+  width: 100%;
+  max-width: 480px; /* Slightly wider for better readability */
+  padding: var(--space-xl);
+  border-radius: var(--radius-lg);
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition-base);
+}
+
+/* Subtle top brand accent line */
+.auth-card-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--bg-gradient);
+}
+
+/* Wide variant for Organization Signup */
+.auth-card-container.auth-card-wide {
+  max-width: 850px;
+}
+
+.auth-logo {
+  height: 45px;
+  width: auto;
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
+}
+
+.auth-title {
+  color: var(--text-primary);
+  font-weight: 800;
+  font-size: 1.75rem;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-xs);
+}
+
+.auth-subtitle {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: var(--space-xl);
+  line-height: 1.5;
+}
+
+.auth-card-body {
+  position: relative;
+}
+
+/* Animation for the card appearing */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeInUp 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .auth-wrapper {
+    padding: var(--space-md);
+    background: var(--bg-primary); /* Simpler background for mobile */
+  }
+
+  .auth-card-container {
+    padding: var(--space-lg);
+    border: none;
+    box-shadow: none;
+  }
+  
+  .auth-title {
+    font-size: 1.5rem;
+  }
+}

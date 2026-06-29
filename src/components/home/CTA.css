@@ -1,0 +1,47 @@
+.cta-section {
+  padding: var(--space-2xl) 0;
+  background-color: var(--bg-primary);
+}
+
+.cta-wrapper {
+  background: var(--bg-gradient);
+  padding: var(--space-2xl) var(--space-lg);
+  border-radius: var(--radius-xl);
+  color: var(--text-inverse);
+  box-shadow: var(--shadow-lg);
+}
+
+.cta-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  margin-bottom: var(--space-md);
+}
+
+.cta-text {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto var(--space-xl);
+  opacity: 0.9;
+}
+
+/* Custom styles for CTA buttons to work on the gradient background */
+.btn-light {
+  background-color: white !important;
+  color: var(--accent-active) !important;
+  border: none !important;
+}
+
+.btn-outline-light {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: white !important;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+}
+
+.btn-outline-light:hover {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.cta-footer-text {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}

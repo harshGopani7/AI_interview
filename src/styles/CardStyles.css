@@ -1,0 +1,416 @@
+/* Shared Card Styles for Policy Drafting, Valuation Report, etc. */
+
+/* Policy/Report Card Custom Styles */
+.policy-card-custom {
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
+  border-radius: 16px;
+  box-shadow: var(--shadow-md);
+  background: var(--card-bg);
+  overflow: hidden;
+  position: relative;
+}
+
+.policy-card-custom:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Card Corner Decoration */
+.card-corner-decoration {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  background: var(--icon-bg);
+  border-radius: 0 16px 0 100%;
+  opacity: 0.6;
+}
+
+/* Card Body */
+.card-body-custom {
+  padding: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Policy Icon Box */
+.policy-icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background-color: var(--primary-color);
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Policy Card Title */
+.policy-card-title {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--text-color);
+  line-height: 1.4;
+  min-height: 44px;
+  margin-bottom: 1rem;
+}
+
+/* Policy Card Footer */
+.policy-card-footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.policy-action-text {
+  color: var(--primary-color);
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+.policy-chevron {
+  color: var(--primary-color);
+  transition: transform 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.policy-card-custom:hover .policy-chevron {
+  transform: translateX(4px);
+}
+
+/* Features Info Panel */
+.features-info-panel {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  background: var(--accent-color);
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.features-panel-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+.feature-list-item {
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--muted-color);
+  display: flex;
+  align-items: flex-start;
+}
+
+.feature-list-item strong {
+  color: var(--text-color);
+  margin-right: 0.25rem;
+}
+
+.feature-bullet {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  margin-right: 10px;
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+
+.features-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--card-bg);
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+  margin: 0 auto;
+  box-shadow: var(--shadow-sm);
+}
+
+.features-icon {
+  color: var(--primary-color);
+  opacity: 0.7;
+}
+
+/* Badges */
+.badge-coming-soon {
+  background: var(--accent-color);
+  color: var(--muted-color);
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.badge-available {
+  background-color: #28a745;
+  color: white;
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+/* Report Section Text */
+.report-section-text {
+  color: var(--muted-color);
+  font-size: 0.8rem;
+  display: block;
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
+}
+
+/* Dark Theme Adjustments */
+.dark-theme .card-corner-decoration {
+  opacity: 0.3;
+}
+
+/* Template Section Styles for AgreementDrafting */
+.template-section {
+  margin-bottom: 2rem;
+}
+
+.template-card {
+  background: var(--card-bg);
+  border: 2px solid var(--border-color);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.template-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), #8b5cf6);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.template-card:hover::before {
+  opacity: 1;
+}
+
+.template-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary-color);
+}
+
+.template-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.template-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, var(--accent-color), #e0e7ff);
+  border-radius: 14px;
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+}
+
+.template-card:hover .template-icon {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-md);
+}
+
+.template-content {
+  flex: 1;
+}
+
+.template-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin: 0 0 0.5rem 0;
+  line-height: 1.4;
+}
+
+.template-description {
+  font-size: 0.95rem;
+  color: var(--muted-color);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.template-action {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.btn-template-generate {
+  background: linear-gradient(135deg, var(--primary-color), #3b82f6);
+  color: white;
+  border: none;
+  padding: 0.875rem 2rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 200px;
+  justify-content: center;
+}
+
+.btn-template-generate:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(11, 94, 215, 0.4);
+  background: linear-gradient(135deg, #0b5ed7, #2563eb);
+}
+
+.btn-template-generate:disabled {
+  background: var(--border-color);
+  color: var(--muted-color);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.btn-template-generate .spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Form Actions Styles */
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.btn-generate {
+  background: linear-gradient(135deg, var(--primary-color), #3b82f6);
+  color: white;
+  padding: 0.875rem 2rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex: 1;
+  min-width: 200px;
+}
+
+.btn-generate:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(11, 94, 215, 0.4);
+  background: linear-gradient(135deg, #0b5ed7, #2563eb);
+}
+
+.btn-generate:disabled {
+  background: var(--border-color);
+  color: var(--muted-color);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.btn-generate .spinner {
+  animation: spin 1s linear infinite;
+}
+
+/* Dark Theme Adjustments for Template */
+.dark-theme .template-card {
+  background: var(--card-bg);
+  border-color: var(--border-color);
+}
+
+.dark-theme .template-icon {
+  background: linear-gradient(135deg, var(--accent-color), #1e293b);
+}
+
+.dark-theme .btn-template-generate:disabled {
+  background: #374151;
+  color: #9ca3af;
+}
+
+.dark-theme .btn-generate:disabled {
+  background: #374151;
+  color: #9ca3af;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .template-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .template-icon {
+    margin: 0 auto;
+  }
+  
+  .template-action {
+    align-items: center;
+  }
+  
+  .btn-template-generate,
+  .btn-generate {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* Warning Card Styles */
+.warning-card {
+  border: 2px solid #dc3545 !important;
+  background: #fff5f5 !important;
+  box-shadow: 0 4px 12px rgba(220, 53, 69, 0.15) !important;
+}
+
+.dark-theme .warning-card {
+  background: #2d1b1b !important;
+  border-color: #dc3545 !important;
+  box-shadow: 0 4px 12px rgba(220, 53, 69, 0.3) !important;
+}
+
+.warning-card .markdown-content {
+  color: #721c24 !important;
+}
+
+.dark-theme .warning-card .markdown-content {
+  color: #f8d7da !important;
+}

@@ -1,0 +1,208 @@
+/* ===========================
+   CV History – Scoped Styles
+   =========================== */
+
+.cv-history-container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* ---------- Top Bar ---------- */
+.cv-history-top-bar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-xl);
+}
+
+.cv-history-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+/* ---------- Center helper ---------- */
+.cv-history-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-2xl) var(--space-lg);
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.cv-history-empty {
+  flex-direction: column;
+  gap: var(--space-sm);
+  text-align: center;
+}
+
+.cv-history-empty p {
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+/* ---------- Date Groups ---------- */
+.cv-history-groups {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.cv-history-date-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--accent-primary);
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-sm);
+  border-bottom: 2px solid var(--accent-soft);
+}
+
+.cv-history-items {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+/* ---------- History Item ---------- */
+.cv-history-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+}
+
+.cv-history-item-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.cv-history-item-title {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cv-history-item-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.cv-history-meta-sep {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.cv-history-item-actions {
+  flex-shrink: 0;
+}
+
+.cv-detail-actions {
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--border-light);
+  margin-top: var(--space-md);
+  text-align: right;
+}
+
+/* ---------- Read-Only Banner ---------- */
+.cv-history-readonly-banner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+  background: var(--info-light);
+  color: var(--info);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  margin-bottom: var(--space-lg);
+  font-size: 0.9rem;
+}
+
+/* ---------- Verdict Badges ---------- */
+.cv-verdict-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: var(--radius-lg);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.cv-verdict-shortlist {
+  background: var(--success-light);
+  color: var(--success);
+}
+
+.cv-verdict-borderline {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.cv-verdict-reject {
+  background: var(--error-light);
+  color: var(--error);
+}
+
+/* ---------- Bucket Summary ---------- */
+.cv-history-buckets {
+  display: flex;
+  gap: var(--space-md);
+  margin-top: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.cv-history-bucket {
+  padding: 6px 14px;
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.cv-history-bucket-shortlist {
+  background: var(--success-light);
+  color: var(--success);
+}
+
+.cv-history-bucket-borderline {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.cv-history-bucket-reject {
+  background: var(--error-light);
+  color: var(--error);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 640px) {
+  .cv-history-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cv-history-item-actions {
+    align-self: flex-end;
+    margin-top: var(--space-sm);
+  }
+
+  .cv-history-top-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-sm);
+  }
+}

@@ -1,0 +1,66 @@
+/* Section Background adjustment */
+.features-section {
+  background-color: var(--bg-secondary); /* Uses your soft secondary background */
+}
+
+/* Icon Container Styling */
+.feature-icon-wrapper {
+  width: 50px;
+  height: 50px;
+  background-color: var(--accent-soft);
+  color: var(--accent-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  font-size: 1.75rem;
+  margin-bottom: var(--space-md);
+  transition: var(--transition-base);
+}
+
+/* Feature Card Specifics */
+.feature-card {
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-light);
+}
+
+.feature-card:hover .feature-icon-wrapper {
+  background-color: var(--accent-primary);
+  color: var(--text-inverse);
+  transform: scale(1.1);
+}
+
+.feature-title {
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-sm);
+  font-size: 1.15rem;
+}
+
+.feature-desc {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+/* Bootstrap Grid Overrides for exact spacing */
+.row.g-4 {
+  --bs-gutter-x: var(--space-lg);
+  --bs-gutter-y: var(--space-lg);
+}
+
+/* Small Device Polish */
+@media (max-width: 768px) {
+  .feature-icon-wrapper {
+    width: 40px;
+    height: 40px;
+    font-size: 1.4rem;
+  }
+  
+  .feature-title {
+    font-size: 1.1rem;
+  }
+}

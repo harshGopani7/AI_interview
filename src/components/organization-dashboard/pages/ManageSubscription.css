@@ -1,0 +1,471 @@
+.manage-sub-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Loading State */
+.manage-sub-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-2xl) 0;
+  gap: var(--space-md);
+  color: var(--text-muted);
+}
+
+.manage-sub-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-xl);
+}
+
+.manage-sub-alert {
+  padding: var(--space-md) var(--space-lg);
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  margin-bottom: var(--space-lg);
+}
+
+.manage-sub-alert-error {
+  background-color: var(--error-light);
+  color: var(--error);
+  border: 1px solid var(--error);
+}
+
+.manage-sub-alert-success {
+  background-color: var(--success-light);
+  color: var(--success);
+  border: 1px solid var(--success);
+}
+
+/* Current Plan Card */
+.current-plan-card {
+  padding: var(--space-xl);
+  margin-bottom: var(--space-xl);
+  border: 1px solid var(--border-light);
+}
+
+.current-plan-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-lg);
+}
+
+.current-plan-icon {
+  width: 56px;
+  height: 56px;
+  background-color: var(--accent-soft);
+  color: var(--accent-primary);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  flex-shrink: 0;
+}
+
+.current-plan-name {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 4px;
+}
+
+.current-plan-status {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.status-active {
+  color: var(--success);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.status-inactive {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.current-plan-price {
+  margin-bottom: var(--space-md);
+  color: var(--text-primary);
+}
+
+.current-plan-price .amount {
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.current-plan-price .currency,
+.current-plan-price .period {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+/* Billing Period Info */
+.billing-info {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-lg);
+}
+
+.billing-info-icon {
+  font-size: 1.3rem;
+  color: var(--accent-primary);
+  flex-shrink: 0;
+}
+
+.billing-info-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.billing-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.billing-dates {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.current-plan-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-xl) 0;
+}
+
+.current-plan-features li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.feat-check {
+  color: var(--success);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.current-plan-actions {
+  border-top: 1px solid var(--border-light);
+  padding-top: var(--space-lg);
+}
+
+/* Invoice Card */
+.invoice-card {
+  padding: var(--space-lg);
+  margin-bottom: var(--space-xl);
+  border: 1px solid var(--border-light);
+}
+
+.invoice-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.invoice-header h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.invoice-header-icon {
+  font-size: 1.3rem;
+  color: var(--accent-primary);
+}
+
+.invoice-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.invoice-row:last-of-type {
+  border-bottom: none;
+}
+
+.invoice-label {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.invoice-value {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.invoice-status-badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: var(--radius-lg);
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  background: var(--success-light);
+  color: var(--success);
+}
+
+.invoice-link {
+  display: inline-block;
+  margin-top: var(--space-md);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--accent-primary);
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+.invoice-link:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+/* Upgrade Section */
+.upgrade-heading {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-lg);
+  display: flex;
+  align-items: center;
+}
+
+.upgrade-plans-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-lg);
+}
+
+.upgrade-plan-card {
+  padding: var(--space-xl) var(--space-lg);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-light);
+  transition: var(--transition-base);
+}
+
+.upgrade-plan-card .popular-badge {
+  position: absolute;
+  top: 0;
+  right: var(--space-md);
+  transform: translateY(-50%);
+  background: var(--bg-gradient);
+  color: var(--text-inverse);
+  padding: 4px 12px;
+  border-radius: var(--radius-xl);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.upgrade-plan-card .plan-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 var(--space-xs);
+}
+
+.upgrade-plan-card .plan-description {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin: 0 0 var(--space-md);
+  line-height: 1.4;
+}
+
+.upgrade-plan-card .plan-price {
+  margin-bottom: var(--space-md);
+  color: var(--text-primary);
+}
+
+.upgrade-plan-card .plan-price .amount {
+  font-size: 2.25rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  color: var(--accent-primary);
+}
+
+.upgrade-plan-card .plan-price .currency,
+.upgrade-plan-card .plan-price .period {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.upgrade-plan-card .plan-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-xl) 0;
+  flex: 1;
+}
+
+.upgrade-plan-card .plan-features li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.upgrade-plan-card .feat-icon {
+  color: var(--success);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.upgrade-plan-btn {
+  width: 100%;
+  padding: var(--space-md);
+  background: var(--bg-gradient);
+  color: var(--text-inverse);
+  border: none;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: var(--transition-base);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.upgrade-plan-btn:hover {
+  box-shadow: var(--shadow-md);
+}
+
+/* No Upgrades Available Card */
+.no-upgrades-card {
+  text-align: center;
+  padding: var(--space-xl);
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-border);
+  margin-bottom: var(--space-xl);
+}
+
+.no-upgrades-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.no-upgrades-icon {
+  font-size: 3rem;
+  color: var(--accent-primary);
+  opacity: 0.8;
+}
+
+.no-upgrades-content h4 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.no-upgrades-content p {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin: 0;
+  max-width: 400px;
+  line-height: 1.5;
+}
+
+/* CV Usage Bar */
+.cv-usage-section {
+  margin: var(--space-md) 0;
+  padding: var(--space-md);
+  background: var(--bg-secondary, rgba(255,255,255,0.03));
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+
+.cv-usage-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.cv-usage-label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.cv-usage-count {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.cv-usage-exhausted {
+  color: #f59e0b;
+}
+
+.cv-usage-bar-bg {
+  height: 8px;
+  background: var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.cv-usage-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.4s ease;
+}
+
+.bar-ok     { background: #059669; }
+.bar-warn   { background: #f59e0b; }
+.bar-danger { background: #dc2626; }
+
+.cv-exhausted-msg {
+  margin-top: 8px;
+  font-size: 0.82rem;
+  color: #f59e0b;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .upgrade-plans-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .billing-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-sm);
+  }
+}

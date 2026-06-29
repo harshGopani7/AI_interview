@@ -1,0 +1,18 @@
+.profile {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.profile h2 {
+  margin: 0;
+  font-size: var(--font-size-xl);
+  color: var(--text-primary);
+}
+
+.empty-state {
+  text-align: center;
+  color: var(--text-muted);
+  padding: var(--space-xl);
+  margin: 0;
+}

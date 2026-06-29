@@ -1,0 +1,21 @@
+.home-container {
+  max-width: var(--container-width);
+  margin: auto;
+  padding: 0 var(--space-md);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: var(--space-lg);
+  align-items: center;
+}
+
+.section-header h2 {
+  font-size: var(--font-size-lg);
+}
+
+.section-header p {
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: var(--space-sm) auto 0;
+}

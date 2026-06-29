@@ -1,0 +1,389 @@
+.contact-page {
+  padding: 2rem 0 3rem;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.contact-hero {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem 0;
+}
+
+.contact-hero-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.hero-highlight {
+  color: var(--primary-color);
+  display: inline-block;
+  position: relative;
+}
+
+.hero-highlight::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  border-radius: 2px;
+  opacity: 0.3;
+}
+
+.hero-subtitle {
+  color: var(--muted-color);
+  font-size: 1.4rem;
+  font-weight: 600;
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+.contact-intro {
+  margin-top: 2rem;
+}
+
+.intro-text {
+  font-size: 1.25rem;
+  color: var(--text-color);
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Contact Cards */
+.contact-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  height: 100%;
+}
+
+.contact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.contact-card .card-body {
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.contact-icon {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.contact-icon svg {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+}
+
+.card-icon {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.card-icon svg {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+}
+
+/* Contact Method Cards */
+.contact-method-title {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.contact-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--muted-color);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.contact-detail {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.contact-link {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid var(--primary-color);
+  border-radius: 8px;
+  display: inline-block;
+  transition: all 0.2s ease;
+}
+
+.contact-link:hover {
+  background-color: var(--primary-color);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.contact-hours {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--muted-color);
+  background: var(--accent-color);
+  padding: 0.75rem;
+  border-radius: 8px;
+}
+
+.hours-icon {
+  color: var(--secondary-color);
+}
+
+/* Section Titles */
+.section-title {
+  color: var(--primary-color);
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  line-height: 1.3;
+}
+
+/* Help Section */
+.help-category {
+  padding: 1.5rem;
+  background: var(--accent-color);
+  border-radius: 12px;
+  height: 100%;
+}
+
+.help-title {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.help-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.help-list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-color);
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.help-list li:last-child {
+  border-bottom: none;
+}
+
+.help-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+/* Office/Commitment Section */
+.office-content {
+  margin-top: 1.5rem;
+}
+
+.commitment-item {
+  text-align: center;
+  padding: 1.5rem;
+  background: var(--accent-color);
+  border-radius: 12px;
+  height: 100%;
+  transition: transform 0.2s ease;
+}
+
+.commitment-item:hover {
+  transform: translateY(-2px);
+}
+
+.commitment-icon {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.commitment-title {
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.commitment-text {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--text-color);
+  margin: 0;
+}
+
+/* Call to Action */
+.contact-cta {
+  text-align: center;
+  padding: 2.5rem;
+  background: var(--accent-color);
+  border-radius: 16px;
+  border: 2px solid var(--primary-color);
+  margin-top: 1rem;
+}
+
+.cta-title {
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.cta-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--text-color);
+  margin-bottom: 2rem;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+}
+
+.cta-phone {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+.cta-phone:hover {
+  background-color: transparent;
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+.cta-email {
+  background-color: transparent;
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.cta-email:hover {
+  background-color: var(--primary-color);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+  .contact-page {
+    padding: 1rem 0 2rem;
+  }
+  
+  .contact-hero {
+    margin-bottom: 2rem;
+    padding: 1rem 0;
+  }
+  
+  .contact-hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .intro-text {
+    font-size: 1.1rem;
+  }
+  
+  .contact-card .card-body {
+    padding: 1.5rem;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+  }
+  
+  .contact-method-title {
+    font-size: 1.3rem;
+  }
+  
+  .contact-link {
+    font-size: 1.1rem;
+    padding: 0.625rem 1.25rem;
+  }
+  
+  .help-category {
+    padding: 1rem;
+  }
+  
+  .commitment-item {
+    padding: 1rem;
+  }
+  
+  .contact-cta {
+    padding: 1.5rem;
+  }
+  
+  .cta-title {
+    font-size: 1.5rem;
+  }
+  
+  .cta-text {
+    font-size: 1rem;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .cta-button {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,27 @@
+.org-dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--bg-secondary);
+}
+
+.org-dashboard-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0; /* Prevents flex items from overflowing */
+  background-color: var(--bg-secondary);
+}
+
+.org-dashboard-content {
+  padding: var(--space-xl);
+  flex: 1;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+/* Responsive adjustment for tablet/mobile */
+@media (max-width: 991px) {
+  .org-dashboard-layout {
+    flex-direction: column;
+  }
+}

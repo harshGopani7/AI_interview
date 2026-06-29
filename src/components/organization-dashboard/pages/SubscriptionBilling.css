@@ -1,0 +1,595 @@
+/* ===========================
+   Subscription Billing - Styles
+   =========================== */
+
+.billing-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-md);
+}
+
+/* Loading State */
+.billing-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-2xl) 0;
+  gap: var(--space-md);
+  color: var(--text-muted);
+}
+
+.billing-header {
+  margin-bottom: var(--space-xl);
+}
+
+.billing-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 var(--space-sm);
+}
+
+.billing-subtitle {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* Error Card */
+.billing-error-card {
+  margin-bottom: var(--space-lg);
+  border: 1px solid var(--error);
+  background: var(--error-light);
+}
+
+.billing-error {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  color: var(--error);
+  font-weight: 500;
+}
+
+/* Current Subscription Card */
+.current-subscription-card {
+  margin-bottom: var(--space-xl);
+  border: 1px solid var(--border-light);
+}
+
+.subscription-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-lg);
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.subscription-header-left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.subscription-header-icon {
+  font-size: 1.4rem;
+  color: var(--accent-primary);
+}
+
+.subscription-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.subscription-status {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: 6px 14px;
+  border-radius: var(--radius-xl);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.status-active {
+  background: var(--success-light);
+  color: var(--success);
+}
+
+.status-canceled {
+  background: var(--error-light);
+  color: var(--error);
+}
+
+.status-past-due {
+  background: var(--warning-light);
+  color: var(--warning);
+}
+
+.status-incomplete {
+  background: var(--info-light);
+  color: var(--info);
+}
+
+.status-trialing {
+  background: var(--accent-soft);
+  color: var(--accent-primary);
+}
+
+.status-unknown {
+  background: var(--bg-muted);
+  color: var(--text-muted);
+}
+
+.subscription-details {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.subscription-plan h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 var(--space-sm);
+  color: var(--text-primary);
+}
+
+.subscription-price {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.price-amount {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--accent-primary);
+}
+
+.price-period {
+  font-size: 1rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* Subscription Features */
+.subscription-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: var(--space-sm);
+}
+
+.subscription-features li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.subscription-features .feat-icon {
+  color: var(--success);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.subscription-periods {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.period-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+}
+
+.period-item.trial {
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-border);
+}
+
+.period-icon {
+  font-size: 1.2rem;
+  color: var(--accent-primary);
+  flex-shrink: 0;
+}
+
+.period-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.period-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.period-date {
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.cancellation-notice {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  background: var(--warning-light);
+  border: 1px solid var(--warning);
+  border-radius: var(--radius-md);
+}
+
+.notice-icon {
+  font-size: 1.2rem;
+  color: var(--warning);
+  flex-shrink: 0;
+}
+
+.notice-content {
+  font-size: 0.95rem;
+  color: var(--warning);
+}
+
+.latest-invoice {
+  padding: var(--space-md) var(--space-lg);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+}
+
+.latest-invoice h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 var(--space-md);
+  color: var(--text-primary);
+}
+
+.invoice-actions {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+/* Invoice History Card */
+.invoice-history-card {
+  margin-bottom: var(--space-xl);
+  border: 1px solid var(--border-light);
+}
+
+.invoice-history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-lg);
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.invoice-history-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.invoice-count {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  background: var(--bg-muted);
+  padding: 4px 10px;
+  border-radius: var(--radius-lg);
+  font-weight: 500;
+}
+
+.no-invoices {
+  text-align: center;
+  padding: var(--space-xl);
+  color: var(--text-muted);
+}
+
+.no-invoices-icon {
+  font-size: 3rem;
+  margin-bottom: var(--space-md);
+  opacity: 0.4;
+}
+
+.invoice-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.invoice-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: var(--space-lg);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  background: var(--bg-primary);
+  transition: var(--transition-base);
+}
+
+.invoice-item:hover {
+  border-color: var(--accent-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.invoice-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.invoice-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-md);
+}
+
+.invoice-id {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.invoice-status {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: 3px 10px;
+  border-radius: var(--radius-lg);
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.invoice-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  align-items: center;
+}
+
+.invoice-detail-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.detail-icon {
+  font-size: 1rem;
+  color: var(--accent-primary);
+  flex-shrink: 0;
+}
+
+.detail-amount {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.reason-badge {
+  display: inline-block;
+  font-size: 0.78rem;
+  background: var(--info-light);
+  color: var(--info);
+  padding: 2px 10px;
+  border-radius: var(--radius-lg);
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+/* Billing Summary Card */
+.billing-summary-card {
+  margin-bottom: var(--space-xl);
+  border: 1px solid var(--border-light);
+}
+
+.billing-summary-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 var(--space-lg);
+  color: var(--text-primary);
+}
+
+.billing-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-md);
+}
+
+.summary-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  padding: var(--space-md);
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+}
+
+.summary-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.summary-value {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.summary-mono {
+  font-family: monospace;
+  font-size: 0.85rem;
+}
+
+.summary-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: 3px 10px;
+  border-radius: var(--radius-lg);
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  width: fit-content;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .billing-container {
+    padding: var(--space-lg) var(--space-sm);
+  }
+
+  .subscription-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-sm);
+  }
+
+  .invoice-history-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-sm);
+  }
+
+  .invoice-item {
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .invoice-actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .invoice-item-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-sm);
+  }
+
+  .invoice-details {
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .subscription-price {
+    align-items: flex-start;
+  }
+
+  .price-amount {
+    font-size: 1.5rem;
+  }
+
+  .billing-summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .subscription-features {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── CV Usage Bar ── */
+.billing-cv-usage {
+  margin: var(--space-md) 0;
+  padding: var(--space-md);
+  background: var(--bg-secondary, rgba(255,255,255,0.03));
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+}
+
+.billing-cv-usage-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.billing-cv-label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.billing-cv-count {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.billing-cv-count.billing-cv-exhausted {
+  color: #f59e0b;
+}
+
+.billing-cv-bar-bg {
+  height: 8px;
+  background: var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.billing-cv-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.4s ease;
+}
+
+.bar-ok     { background: #059669; }
+.bar-warn   { background: #f59e0b; }
+.bar-danger { background: #dc2626; }
+
+.billing-cv-exhausted-msg {
+  margin-top: 8px;
+  font-size: 0.82rem;
+  color: #f59e0b;
+  font-weight: 500;
+}
+
+/* ── Repurchase Section ── */
+.billing-repurchase-section {
+  margin: var(--space-md) 0;
+  padding: var(--space-md);
+  background: rgba(245, 158, 11, 0.05);
+  border: 1px solid #f59e0b;
+  border-radius: var(--radius-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.billing-repurchase-msg {
+  font-size: 0.85rem;
+  color: #fca5a5;
+  margin: 0;
+}
+
+.billing-repurchase-hint {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin: 0;
+}

@@ -1,0 +1,376 @@
+.subscribe-page {
+  min-height: 100vh;
+  padding: var(--space-2xl) 0;
+  background: var(--bg-secondary);
+}
+
+.subscribe-header {
+  margin-bottom: var(--space-xl);
+}
+
+.subscribe-badge {
+  display: inline-block;
+  background-color: var(--accent-soft);
+  color: var(--accent-active);
+  padding: 6px 18px;
+  border-radius: var(--radius-xl);
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: 1px solid var(--accent-border);
+  margin-bottom: var(--space-md);
+}
+
+.subscribe-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.subscribe-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 560px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.subscribe-canceled-banner {
+  background-color: var(--warning-light);
+  color: var(--warning);
+  border: 1px solid var(--warning);
+  border-radius: var(--radius-md);
+  padding: var(--space-md) var(--space-lg);
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: var(--space-lg);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.subscribe-error {
+  background-color: var(--error-light);
+  color: var(--error);
+  border: 1px solid var(--error);
+  border-radius: var(--radius-md);
+  padding: var(--space-md) var(--space-lg);
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: var(--space-lg);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.subscribe-plans-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+  align-items: stretch;
+  max-width: 1100px;
+  margin: 0 auto var(--space-xl);
+}
+
+.subscribe-plan-card {
+  padding: var(--space-xl) var(--space-lg);
+  position: relative;
+  transition: var(--transition-base);
+  border: 1px solid var(--border-light);
+  display: flex;
+  flex-direction: column;
+}
+
+.subscribe-plan-card.popular {
+  border: 2px solid var(--accent-primary);
+  transform: scale(1.04);
+  box-shadow: var(--shadow-lg);
+  z-index: 2;
+}
+
+.subscribe-plan-card .popular-badge {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--bg-gradient);
+  color: white;
+  padding: 6px 16px;
+  border-radius: var(--radius-xl);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.subscribe-plan-card .plan-header {
+  margin-bottom: var(--space-lg);
+}
+
+.subscribe-plan-card .plan-name {
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.subscribe-plan-card .plan-price {
+  color: var(--text-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.subscribe-plan-card .plan-price .amount {
+  font-size: 3rem;
+  font-weight: 400;
+  letter-spacing: -1px;
+}
+
+.subscribe-plan-card .plan-price .currency,
+.subscribe-plan-card .plan-price .period {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.subscribe-plan-card .plan-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-xl) 0;
+  text-align: left;
+  flex: 1;
+}
+
+.subscribe-plan-card .plan-features li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.subscribe-plan-card .feat-icon {
+  color: var(--success);
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.btn-subscribe-outline {
+  background-color: transparent !important;
+  color: var(--accent-secondary) !important;
+  border: 2px solid var(--border-medium) !important;
+}
+
+.btn-subscribe-outline:hover {
+  border-color: var(--accent-secondary) !important;
+  background-color: var(--bg-muted) !important;
+}
+
+.subscribe-footer-text {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.subscribe-success {
+  background-color: var(--success-light, #d1fae5);
+  color: var(--success, #059669);
+  border: 1px solid var(--success, #059669);
+  border-radius: var(--radius-md);
+  padding: var(--space-md) var(--space-lg);
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: var(--space-lg);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ── Payment Provider Modal ── */
+.provider-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: var(--space-lg);
+}
+
+.provider-modal {
+  background: var(--bg-primary, #fff);
+  border-radius: var(--radius-xl, 16px);
+  padding: var(--space-xl) var(--space-xl);
+  max-width: 480px;
+  width: 100%;
+  position: relative;
+  box-shadow: var(--shadow-xl, 0 20px 60px rgba(0,0,0,0.2));
+  animation: modalSlideIn 0.2s ease;
+}
+
+@keyframes modalSlideIn {
+  from { opacity: 0; transform: translateY(-16px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.provider-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 0 4px;
+  transition: color 0.15s;
+}
+.provider-modal-close:hover { color: var(--text-primary); }
+
+.provider-modal-header {
+  margin-bottom: var(--space-lg);
+}
+.provider-modal-header h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+.provider-modal-header p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.provider-modal-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-md);
+}
+
+.provider-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.provider-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: var(--space-lg) var(--space-md);
+  border: 2px solid var(--border-light, #e5e7eb);
+  border-radius: var(--radius-lg, 12px);
+  background: var(--bg-secondary, #f9fafb);
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s, box-shadow 0.15s;
+  position: relative;
+  text-align: center;
+}
+
+.provider-option:hover {
+  border-color: var(--accent-primary, #6366f1);
+  background: var(--accent-soft, #eef2ff);
+}
+
+.provider-option.selected {
+  border-color: var(--accent-primary, #6366f1);
+  background: var(--accent-soft, #eef2ff);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+.provider-logo {
+  height: 22px;
+  width: auto;
+  max-width: 100px;
+}
+
+.provider-option-name {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
+
+.provider-option-desc {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.3;
+}
+
+.provider-check {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  color: var(--accent-primary, #6366f1);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.provider-modal-actions {
+  margin-top: var(--space-md);
+}
+
+/* ── Razorpay checkout button ── */
+.rzp-checkout-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #3395ff 0%, #072654 100%);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius-md, 8px);
+  cursor: pointer;
+  transition: opacity 0.15s, transform 0.1s;
+}
+.rzp-checkout-btn:hover:not(:disabled) { opacity: 0.9; transform: translateY(-1px); }
+.rzp-checkout-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.rzp-proceed-btn {
+  padding: 14px 24px !important;
+  font-size: 1rem !important;
+}
+
+.rzp-btn-loading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.rzp-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255,255,255,0.4);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: rzpSpin 0.7s linear infinite;
+  display: inline-block;
+}
+
+@keyframes rzpSpin {
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 991px) {
+  .subscribe-plans-grid {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+  }
+
+  .subscribe-plan-card.popular {
+    transform: scale(1);
+  }
+
+  .provider-options {
+    grid-template-columns: 1fr;
+  }
+}
